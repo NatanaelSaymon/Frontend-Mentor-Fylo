@@ -106,6 +106,89 @@ form button{
   cursor: pointer;
 }
 
+/* === MAIN === */
+section.main{
+  background-color: #F9F8FE;
+  padding-bottom: 30px;
+}
+
+section.principal:after{
+  content: '';
+  display: block;
+  background-image: url('./images/bg-curve-desktop.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120px;
+}
+
+.main-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.main-info h1{
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.descricao p{
+  max-width: 450px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.destaque{
+  max-width: 156px;
+  padding-bottom: 3px;
+  color: hsl(170, 45%, 43%);
+  font-size: 15px;
+  border-bottom: 1px solid hsl(170, 45%, 43%);
+  margin-bottom: 20px;
+}
+
+.depoimento{
+  max-width: 330px;
+  display: grid;
+  background: #fff;
+  text-align: justify;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 9px -2px #ccc;;
+}
+
+.depoimento .icon{
+  margin-bottom: 10px;
+}
+
+.depoimento .avatar{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 45px 4fr;
+  padding-top: 20px;
+  font-size: 10px;
+}
+
+.avatar-img{
+  width: 40px;
+  border-radius: 50%;
+}
+
+.avatar-info .avatar-title{
+  font-weight: bold;
+}
+
+.main-img{
+  padding: 50px 0px 50px 50px;
+}
+
 /* === MOBILE === */
 
 @media(min-width: 840px) and (max-width: 980px){
@@ -163,8 +246,17 @@ form button{
   .principal-info{
     display: grid;
     justify-content: center;
-    text-align: center;
-    padding: 0 10px;
+    text-align: center; 
+  }
+
+  .main-container{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .main-info{
+    display: grid;
+    justify-items: center;
   }
 }
 
@@ -220,5 +312,38 @@ form button{
 
   .principal-info button{
     width: 100%;
+  }
+
+  .main-info h1{
+    font-size: 25px;
+  }
+
+  .main-info p{
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 426px){
+  .principal-info form input{
+    width: 300px;
+    max-width: 300px;
+    height: 30px;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+  }
+
+  section.principal:after{
+    content: '';
+    display: block;
+    background-image: url('./images/bg-curve-mobile.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120px;
+  }
+
+  .main-info h1{
+    font-size: 23px;
   }
 }
