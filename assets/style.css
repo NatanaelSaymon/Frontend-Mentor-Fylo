@@ -37,7 +37,7 @@ header{
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 30px 20px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -71,7 +71,7 @@ header{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 30px 10px;
+  padding: 30px 20px;
 }
 
 .principal-info h1{
@@ -87,7 +87,7 @@ header{
 }
 
 .principal-info form input{
-  width: 300px;
+  max-width: 300px;
   height: 30px;
   font-size: 15px;
   padding: 10px;
@@ -128,7 +128,7 @@ section.principal:after{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 20px;
 }
 
 .main-info h1{
@@ -265,6 +265,10 @@ section.principal:after{
     display: block;
   }
 
+  header{
+    position: fixed;
+  }
+
   nav ul{
     position: fixed;
     flex-direction: column;
@@ -324,15 +328,6 @@ section.principal:after{
 }
 
 @media(max-width: 426px){
-  .principal-info form input{
-    width: 300px;
-    max-width: 300px;
-    height: 30px;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-  }
-
   section.principal:after{
     content: '';
     display: block;
@@ -345,5 +340,26 @@ section.principal:after{
 
   .main-info h1{
     font-size: 23px;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 426px){
+  .principal-info form input{
+    width: 250px;
+    max-width: 300px;
+    height: 30px;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+  }
+}
+
+@media(max-width: 320px){
+  .principal-info form input{
+    max-width: 300px;
+    height: 30px;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
   }
 }
