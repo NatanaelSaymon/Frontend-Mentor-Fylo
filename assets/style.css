@@ -98,9 +98,12 @@ header{
   font-size: 15px;
   padding: 10px;
   outline: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 2px 3px 7px -6px #000;
 }
 
-form button{
+.principal-info form button{
   width: 150px;
   height: 30px;
   background-color: hsl(224, 93%, 58%);
@@ -110,6 +113,7 @@ form button{
   border-radius: 2px;
   outline: none;
   cursor: pointer;
+  box-shadow: 2px 3px 7px -6px #000;
 }
 
 /* === MAIN === */
@@ -166,7 +170,7 @@ section.principal:after{
   padding: 20px;
   font-size: 14px;
   border-radius: 5px;
-  box-shadow: 1px 3px 9px -2px #ccc;;
+  box-shadow: 1px 3px 9px -2px #ccc;
 }
 
 .depoimento .icon{
@@ -193,6 +197,74 @@ section.principal:after{
 .main-img{
   padding: 50px 0px 50px 50px;
 }
+
+/* === NEWSLETTER === */
+
+section.newsletter{
+  width: 100%;
+  padding: 60px 0px;
+  background: hsl(238, 22%, 44%);
+}
+
+.newsletter-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px;
+}
+
+.newsletter-info{
+  color: #fff;
+}
+
+.newsletter-info h1{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.newsletter-info p{
+  max-width: 450px;
+  font-size: 14px;
+}
+
+.newsletter-form{
+  display: grid;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.newsletter-form form{
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.newsletter-form form input{
+  height: 30px;
+  width: 90%;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 2px 3px 7px -6px #000;
+}
+
+.newsletter-form button{
+  width: 200px;
+  height: 30px;
+  background-color: hsl(224, 93%, 58%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 2px 3px 7px -6px #000;
+}
+
+
 
 /* === MOBILE === */
 
@@ -264,6 +336,10 @@ section.principal:after{
   #times{
     display: none;
   }
+
+  .newsletter-form button{
+    justify-self: start;
+  }
 }
 
 @media(max-width: 767px){
@@ -287,7 +363,7 @@ section.principal:after{
     grid-column-gap: 0;
   }
 
-  form button{
+  .principal-info form button {
     width: 205px;
     justify-self: end;
   }
@@ -311,6 +387,30 @@ section.principal:after{
   }
 }
 
+@media(max-width: 584px){
+  .newsletter-container{
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .newsletter-info{
+    justify-self: center;
+    text-align: center;
+  }
+
+  .newsletter-form{
+    padding-left: 0;
+  }
+
+  .newsletter-form form{
+    justify-items: center;
+  }
+
+  .newsletter-form button{
+    justify-self: center;
+  }
+}
+
 @media(max-width: 560px){
   .principal-info form{
     grid-template-columns: 1fr;
@@ -318,11 +418,11 @@ section.principal:after{
     grid-row-gap: 5px;
   }
 
-  form input{
+  .principal-info form input{
     width: 70%;
   }
 
-  form button{
+  .principal-info form button{
     width: 70%;
     justify-self: center;
   }
