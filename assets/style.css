@@ -29,6 +29,7 @@ body{
 
 header{
   width: 100%;
+  background: #fff;
 }
 
 .header{
@@ -37,7 +38,7 @@ header{
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 20px 20px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -86,8 +87,13 @@ header{
   margin-bottom: 20px;
 }
 
+.principal-info form{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 5px;
+}
+
 .principal-info form input{
-  max-width: 300px;
   height: 30px;
   font-size: 15px;
   padding: 10px;
@@ -95,7 +101,7 @@ header{
 }
 
 form button{
-  width: 130px;
+  width: 150px;
   height: 30px;
   background-color: hsl(224, 93%, 58%);
   color: #fff;
@@ -132,8 +138,7 @@ section.principal:after{
 }
 
 .main-info h1{
-  text-align: center;
-  font-size: 34px;
+  font-size: 33px;
   margin-bottom: 30px;
 }
 
@@ -202,10 +207,6 @@ section.principal:after{
     font-size: 14px;
   }
 
-  .principal-info form input{
-    width: 250px;
-  }
-
   .principal-banner{
     padding: 0 10px;
   }
@@ -221,50 +222,9 @@ section.principal:after{
     width: 400px;
     font-size: 14px;
   }
-
-  .principal-info form{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .principal-info form input{
-    width: 80%;
-    margin-bottom: 5px;
-  }
-
-  form button{
-    width: 80%;
-  }
-}
-
-@media(max-width: 767px){
-  .principal-container{
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-  }
-
-  .principal-info{
-    display: grid;
-    justify-content: center;
-    text-align: center; 
-  }
-
-  .main-container{
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .main-info{
-    display: grid;
-    justify-items: center;
-  }
 }
 
 @media(max-width: 769px){
-  #icon{
-    display: block;
-  }
-
   header{
     position: fixed;
   }
@@ -293,8 +253,78 @@ section.principal:after{
     left: 0;
   }
 
+  section.principal{
+    padding-top: 90px;
+  }
+
+  #icon{
+    display: block;
+  }
+
   #times{
     display: none;
+  }
+}
+
+@media(max-width: 767px){
+  .principal-container{
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .principal-info{
+    display: grid;
+    justify-content: center;
+    text-align: center; 
+  }
+
+  .principal-info p{
+    justify-self: center;
+  }
+
+  .principal-info form{
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 0;
+  }
+
+  form button{
+    width: 205px;
+    justify-self: end;
+  }
+
+  .main-container{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .main-info{
+    display: grid;
+    justify-items: center;
+  }
+
+  .main-info h1{
+    text-align: center;
+  }
+
+  .main-img{
+    padding: 50px 0px;
+  }
+}
+
+@media(max-width: 560px){
+  .principal-info form{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-row-gap: 5px;
+  }
+
+  form input{
+    width: 70%;
+  }
+
+  form button{
+    width: 70%;
+    justify-self: center;
   }
 }
 
@@ -308,16 +338,6 @@ section.principal:after{
     font-size: 13px;
   }
 
-  .principal-info form{
-    display: grid;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .principal-info button{
-    width: 100%;
-  }
-
   .main-info h1{
     font-size: 25px;
   }
@@ -328,7 +348,7 @@ section.principal:after{
 }
 
 @media(max-width: 426px){
-  section.principal:after{
+  section.principal:after{ /*Trocando bg curver para img mobile*/
     content: '';
     display: block;
     background-image: url('./images/bg-curve-mobile.png');
@@ -340,26 +360,5 @@ section.principal:after{
 
   .main-info h1{
     font-size: 23px;
-  }
-}
-
-@media(min-width: 320px) and (max-width: 426px){
-  .principal-info form input{
-    width: 250px;
-    max-width: 300px;
-    height: 30px;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-  }
-}
-
-@media(max-width: 320px){
-  .principal-info form input{
-    max-width: 300px;
-    height: 30px;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
   }
 }
