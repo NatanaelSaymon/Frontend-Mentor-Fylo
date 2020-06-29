@@ -344,10 +344,6 @@ footer a{
 }
 
 @media(max-width: 769px){
-  header{
-    /* position: fixed; */
-  }
-
   nav ul{
     position: fixed;
     flex-direction: column;
@@ -528,9 +524,7 @@ footer a{
   .newsletter-form button {
     width: 90%;
   }
-}
 
-@media(max-width: 376px){
   footer{
     padding: 60px 0px 30px 0px;
   }
