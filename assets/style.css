@@ -345,7 +345,7 @@ footer a{
 
 @media(max-width: 769px){
   header{
-    position: fixed;
+    /* position: fixed; */
   }
 
   nav ul{
