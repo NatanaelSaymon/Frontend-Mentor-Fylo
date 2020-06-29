@@ -364,6 +364,10 @@ footer a{
     margin: 10px;
   }
 
+  .fixed{
+    position: fixed;
+  }
+
   .show{
     left: 0;
   }
