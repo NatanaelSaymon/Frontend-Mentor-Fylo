@@ -7,7 +7,7 @@ const header = document.querySelector('#header-fixed')
 
 menuMobile.addEventListener("click", () => {
   nav.classList.toggle('show')
-  header.classList.add('fixed')
+  header.classList.toggle('fixed')
 })
 
 bars.addEventListener("click", () =>{
